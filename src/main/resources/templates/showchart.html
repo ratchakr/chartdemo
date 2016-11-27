@@ -57,11 +57,7 @@ $(document).ready(function() {
       
    // the value axis
    var yAxis = {
-      stops: [
-         [0.1, '#55BF3B'], // green
-         [0.5, '#DDDF0D'], // yellow
-         [0.9, '#DF5353'] // red
-      ],
+      
       lineWidth: 0,
       minorTickInterval: null,
       tickPixelInterval: 400,
@@ -95,7 +91,18 @@ $(document).ready(function() {
 
    var series = [{
       name: 'Speed',
-      data: [initialValue],
+      data: [{
+          color: {
+            linearGradient: [0, 0, 300, 0],
+            stops: [
+              [0.1, '#55BF3B'], // green
+              [0.5, '#DDDF0D'], // yellow
+              [0.9, '#DF5353'] // red
+            ]
+          },
+          y: 80
+        }],      
+      //data: [initialValue],
       dataLabels: {
          format: '<div style="text-align:center"><span style="font-size:25px;color:' +
          ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}</span><br/>' +
