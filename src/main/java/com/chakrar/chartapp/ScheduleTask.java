@@ -20,7 +20,7 @@ public class ScheduleTask {
     private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
 
     // this will send a message to an endpoint on which a client can subscribe
-    @Scheduled(fixedRate = 5000)
+    //@Scheduled(fixedRate = 36000)
     public void execute() {
         // sends the message to /topic/message
     	//log.info(" RATNO Triggering WS message "+this.template.hashCode());

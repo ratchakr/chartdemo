@@ -24,4 +24,9 @@ public class HomeController {
 	public String showchart(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
         return "showchart";
     }
+	
+	@RequestMapping("/showlinechart")
+	public String showLineChart(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
+        return "showlinechart";
+    }	
 }

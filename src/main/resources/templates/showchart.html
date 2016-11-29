@@ -1,6 +1,6 @@
 <html>
 <head xmlns:th="http://www.thymeleaf.org">
-<title>Highcharts</title>
+<title>Windspeed Chart</title>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
    <script src="https://code.highcharts.com/highcharts.js"></script>    
    <script src="https://code.highcharts.com/highcharts-more.js"></script>
@@ -135,16 +135,11 @@ $(document).ready(function() {
 	   
 	   var messageList = $('#messages');
 	   stompClient.connect({ }, function(frame) {
-	       // subscribe to the /topic/message endpoint
-	       stompClient.subscribe("/topic/message", function(data) {
-	    	   //alert("new value from server = "+data.body);
+	       stompClient.subscribe("/topic/airquality/windspeed", function(data) {
 	           message = data.body;
 	           newValue = JSON.stringify(data.body);
 	           console.log("data = "+newValue);
 	           messageList.append("<li>" + newValue + "</li>");
-	           //var point = $('#container-speed').highcharts().series[0].points[0]; 
-	           //console.log("point = "+point);
-	           //point.update(newValue);	
 	           chartFunction(message);
 	       });
 	   });	   
