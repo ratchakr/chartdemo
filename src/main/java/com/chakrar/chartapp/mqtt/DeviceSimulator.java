@@ -14,7 +14,6 @@ public class DeviceSimulator implements CommandLineRunner {
     
     public void start() {
     	System.out.println("Starting Simulation");
-    	//new PahoClient().start();
     }
 
 	@Override

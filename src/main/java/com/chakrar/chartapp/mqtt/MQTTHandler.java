@@ -38,7 +38,7 @@ public class MQTTHandler {
 	
 	private MqttAsyncClient maCl;
 	
-	public static String MQTT_URL = "tcp://192.168.0.4:1883";
+	public static String MQTT_URL = "tcp://138.85.13.121:1883";
 
 	public MqttAsyncClient getMaCl() {
 		return maCl;
@@ -48,27 +48,6 @@ public class MQTTHandler {
 		this.maCl = maCl;
 	}
 
-	/** The its vin. */
-	private String vin;
-
-	/**
-	 * Gets the vin.
-	 *
-	 * @return the vin
-	 */
-	public String getVin() {
-		return vin;
-	}
-
-	/**
-	 * Sets the vin.
-	 *
-	 * @param aVin
-	 *            the new vin
-	 */
-	public void setVin(String aVin) {
-		this.vin = aVin;
-	}
 
 	/**
 	 * Instantiates a new mQTT handler.

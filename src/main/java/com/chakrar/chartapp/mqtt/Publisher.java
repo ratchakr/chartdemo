@@ -2,14 +2,13 @@ package com.chakrar.chartapp.mqtt;
 
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttException;
-import org.eclipse.paho.client.mqttv3.MqttPersistenceException;
 
 public class Publisher {
 
 	public static final String WINDSPEED_TOPIC = "airquality/windspeed";
-    private static final String WEATHER_TOPIC = "eclipsecon/weather";
+    //private static final String WEATHER_TOPIC = "eclipsecon/weather";
     private static final String TEMPERATURE_TOPIC = "airquality/temperature";
-    private static final String GLAZE_WARNING_TOPIC = "eclipsecon/glaze";
+    //private static final String GLAZE_WARNING_TOPIC = "eclipsecon/glaze";
 
     private final MqttClient client;
     private final RandomGenerator randomGenerator;
@@ -40,7 +39,7 @@ public class Publisher {
         return temperature;
 	}
 
-	private String publishGlazeWarning(int temp) throws MqttException {
+/*	private String publishGlazeWarning(int temp) throws MqttException {
 
         final String isStreetIcy = randomGenerator.isStreetIcy(temp);
         client.publish(GLAZE_WARNING_TOPIC, isStreetIcy.getBytes(), 2, false);
@@ -51,7 +50,7 @@ public class Publisher {
         final String weather = randomGenerator.getWeather(temp);
         client.publish(WEATHER_TOPIC, weather.getBytes(), 2, false);
         return weather;
-    }
+    }*/
 
     private Integer publishTemperature() throws MqttException {
     	System.out.println("... Inside publishTemperature method ...");

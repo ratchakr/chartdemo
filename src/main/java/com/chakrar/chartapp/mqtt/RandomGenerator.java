@@ -5,12 +5,12 @@ import java.util.Random;
 public class RandomGenerator {
 
 
-    private final int Min = -20;
+/*    private final int Min = -20;
     private final int Max = 60;
     private boolean trend = true;
     private Integer lastValue;
     
-    private final int Wind_Speed_Min = 5;
+    private final int Wind_Speed_Min = 5;*/
 
 
     /**
@@ -47,11 +47,11 @@ public class RandomGenerator {
 
     }
 
-    /**
+/*    *//**
      * Random Weather Forecast
      *
      * @return string which describes the weather situation
-     */
+     *//*
     public String getWeather(int temp) {
         String weather = null;
         if (temp < 0) {
@@ -92,11 +92,7 @@ public class RandomGenerator {
 
     }
 
-    /**
-     * Warning from glaze
-     *
-     * @return false, if their is no need to worry and true if the streets are icy.
-     */
+
     public String isStreetIcy(int temp)
     {
         String glazeWarning;
@@ -107,7 +103,7 @@ public class RandomGenerator {
             glazeWarning = "true";
         }
         return glazeWarning;
-    }
+    }*/
 
     private int getNumberBetween(int min, int max) {
         return min + (int) (Math.random() * ((max - min) + 1));
